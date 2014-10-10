@@ -62,44 +62,19 @@ class Pessoa
 	end
 
 
-
-	#accessor methods
-
-	def getNome
+	def printInfo
 		puts "Nome: " + @nome
-	end
-
-	def getNascimento
 		puts "Data de Nascimento: " + @data.to_s
-	end
-
-	def getSexo
+		puts "Idade: " + @idade.to_s
 		puts "Sexo: " + @sexo
-	end
-
-	def getLocal
 		puts "Localizacao: " + @local.to_s
 	end
 
-	def getIdade
-		puts "Idade: " + @idade.to_s
-	end
-
-	def printInfo
-		getNome
-		getNascimento
-		getIdade
-		getSexo
-		getLocal
-	end
-
-	
-	
 end
 
 
 
-#p = Pessoa.new("Joao da Silva", "10/10/1993", )
+# creating objects
 pessoa1 = Pessoa.new("Joao Silva", "07/10/2002", "masculino", "7.5")
 
 pessoa2 = Pessoa.new
@@ -110,6 +85,7 @@ pessoa2.sexo = "Feminino"
 pessoa2.idade = 23
 
 
+/printing information about the objects/
 
 puts pessoa1.inspect
 puts pessoa2.inspect
