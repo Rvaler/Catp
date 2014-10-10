@@ -109,9 +109,21 @@ pessoa2.data = "25-03-1975"
 pessoa2.sexo = "Feminino"
 pessoa2.idade = 23
 
+
+
+puts pessoa1.inspect
+puts pessoa2.inspect
 pessoa1.printInfo
 puts 
 pessoa2.printInfo
 
+/  CLONE DA INSTANCIA /  
+puts
+pessoaClone = pessoa1.clone
+
+puts pessoaClone.inspect
+puts pessoa1.inspect
+
+/podemos ver que os atributos sao os mesmos, no entanto os objectos estao localizados em diferentes espacos de memoria /
 
 
