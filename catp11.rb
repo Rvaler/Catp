@@ -76,21 +76,27 @@ class Funcionario < Pessoa
 
 	attr_accessor :salario, :cargo
 
-	def initialize(nome = "Indefinido", data = nil, sexo = "Indefinido", local = "0.0", 
-				salario = "Indefinido", cargo = "Indefinido")
+	def initialize(nome = "indef" , data = nil, sexo = "Indefinido", local = "0.0", 
+				salario = 0, cargo = "Indefinido")
 
-		super(nome) 
-		super(data)
-		super(sexo)
-		super(local)
-		@salario = salario
+		super(nome, data, sexo, local)
+	
+		if(salario < 0 or salario > 10000)
+			@salario = 0
+		else
+			@salario = salario
+		end
+		
+
+
 		@cargo = cargo
 
 	end
 end
 
 
-f = Funcionario.new("joe a l")
+f = Funcionario.new("Joao Silva", "07/10/2002", "masculino", "7.5", 500.50, "ka" )
+#f.nome = "jon"
 puts f.nome
 
 
